@@ -17,7 +17,7 @@ The Newton Gripper has three wires: power, signal, and ground. These can be seen
 2. Connect the red power wire to a voltage source, from 9 to 18 volts. Connect the black wire to ground.
 
 To control the device, apply the following pwm pulse sizes:
-- > 1530us - Extend.
+- \> 1530us - Extend.
 - = 1500us - No movement.
 - < 1470us - Retract.
 
