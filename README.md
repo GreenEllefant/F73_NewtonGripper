@@ -24,15 +24,15 @@
  <p align="center"> <img src = img/NewtonGripper_SideViewWithCables.jpg width = 400> </p>
  <p align=center> <b> Figure 1: </b> Newton Gripper - Side View with Cables
 
- Questions:
-    - How fast does the actuator move? Is this a function of the load applied?
-    - How much force is applied during extension/retraction?
-    - Does the device have built in hard stops on the extension/retraction?
-    - What is the best frequency for the pwm? What is the full wave period?
-    - How does the device behave when there is no power? Does the load pull out the shaft?
-    - How does the device behave when the signal wire is floating? Does the device still draw power?
-    - How does the device behave when there is insufficient power supply voltage? Insufficient current?
-    - How does the device behave when the load has a radial component on the shaft?
+Questions:
+- How fast does the actuator move? Is this a function of the load applied?
+- How much force is applied during extension/retraction?
+- Does the device have built in hard stops on the extension/retraction?
+- What is the best frequency for the pwm? What is the full wave period?
+- How does the device behave when there is no power? Does the load pull out the shaft?
+- How does the device behave when the signal wire is floating? Does the device still draw power?
+- How does the device behave when there is insufficient power supply voltage? Insufficient current?
+- How does the device behave when the load has a radial component on the shaft?
     
 ## STM32 Testing Results (IN PROGRESS)
  This section contains the details of the testing done using the STM32 in CalPoly's mechatronics lab using the lab hardware.
