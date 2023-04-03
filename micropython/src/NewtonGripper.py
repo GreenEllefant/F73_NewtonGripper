@@ -32,17 +32,20 @@ class NewtonGripper:
     def extend(self):
         '''! Runs the pwm signal to cause the actuator to extend.'''
         self.status = 1
-        self.ch1.pulse_width(5000)   # 5000 ticks = 1.2507ms on oscilloscope
+        self.ch1.pulse_width(7000)   # 7000 ticks = 1.7510ms on oscilloscope
+        print( "newt.extend()" )
         
     def retract(self):
         '''! Runs the pwm signal to cause the actuator to retract.'''
         self.status = -1
-        self.ch1.pulse_width(7000)   # 7000 ticks = 1.7510ms on oscilloscope
+        self.ch1.pulse_width(5000)   # 5000 ticks = 1.2507ms on oscilloscope
+        print( "newt.retract()" )
         
     def stop(self):
         '''! Runs the pwm signal to cause the actuator to stop moving.'''
         self.status = 0
         self.ch1.pulse_width(6000)   # 6000 ticks = 1.5008ms on oscilloscope
+        print( "newt.stop()" )
         
     def get_status(self):
         '''! Gives the status of the NewtonGripper. 1 for extending, 0 for stopped, -1 for retracting.'''
@@ -69,7 +72,14 @@ if __name__ == "__main__":
     newt = NewtonGripper(pin_PB6, timer4)
     
     # Run tests
+    print("TEST START")
     newt.retract()
-    print( "newt.retract()" )
+    prevTime = pyb.millis()
+    while True:
+        if pyb.millis() > (prevTime + 1000):
+            newt.stop()
+            break
+    print("TEST FINISHED")
+    
     
     
