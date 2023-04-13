@@ -26,39 +26,55 @@ To control the device, apply the following pwm pulse sizes:
 
 Questions:
 - How fast does the actuator move? Is this a function of the load applied?
+  - 2 seconds unloaded at 2A current limit
 - How much force is applied during extension/retraction?
+  - ans
 - Does the device have built in hard stops on the extension/retraction?
+  - ans
 - What is the best frequency for the pwm? What is the full wave period?
+  - ans
 - How does the device behave when there is no power? Does the load pull out the shaft?
+  - ans
 - How does the device behave when the signal wire is floating? Does the device still draw power?
+  - ans
 - How does the device behave when there is insufficient power supply voltage? Insufficient current?
+  - ans
 - How does the device behave when the load has a radial component on the shaft?
+  - ans
     
-## STM32 Testing Results (IN PROGRESS)
+## STM32 Testing Results (COMPLETE)
 This section contains the details of the testing done using the STM32 in CalPoly's mechatronics lab using the lab hardware.
 
 Materials:
 - PSU
 - Nucleo-64, USB-to-Micro cable
 - PC running Thonny
-- Weights
-- Pulley
-- Rope
+- Newton Gripper
 
 Device Setup:
-1. Connect the purple wire to the yellow wire.
-2. Press go.
-3. Profit.
+1. Connect PSU power to Actuator
+2. Connect Nucleo to computer
+3. Connect PWM from Nucleo to yellow signal
 
-Test 1:
-    This is the description of test 1.
-
-Test 2: 
-    This is the description of test 2.
- 
-etc....
+Results:
+ Actuator runs in expected pulse range. Disconnecting signal causes actuator to stop the motion.
 
 ## Arduino Testing Results (IN PROGRESS)
 This section contains the details of the arduino code implementation. It also documents our setup including which pin the signal is applied to and how the actuator is connected to power.
 
-...
+Materials:
+- Pulley test rig
+- Actuator
+- PSU
+- Arduino Mega, voltage divider
+- Computer
+- Weights
+- Current Sensor 
+  - (https://www.pololu.com/product/2453/pictures)
+  - Pololu 0J7387 cs02b white square with green X
+
+Device Setup
+1. Connect Arduino to voltage divider and computer
+2. Mount Actuator
+3. Connect actuator to power
+4. Run tests
